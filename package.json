@@ -1,0 +1,16 @@
+{
+  "name": "basic_ts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.3",
+    "express": "^4.18.1",
+    "typescript": "^4.4.2"
+  },
+  "scripts": {
+    "start": "nodemon -watch '*' --ext 'ts,json,html' --exec 'npm run compile && ts-node server.ts'",
+    "serverOnly": "nodemon ./server.ts ts-node server.ts",
+    "compile": "cd src && rm -Rf ./js && tsc"
+  }
+}
